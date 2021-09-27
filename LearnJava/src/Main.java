@@ -1,25 +1,17 @@
-import java.util.Iterator;
-import java.util.LinkedList;
-
 public class Main {
 
 	public static void main(String[] args) {
-		LinkedList<String> names = new LinkedList<String>();
+		int[][] data = {
+				{1, 2, 3},
+				{4, 5, 6},
+				{7, 8, 9}
+		};
 		
-		names.push("Caleb");
-		names.push("Sue");
-		names.push("Sally");
-		
-		Iterator<String> it = names.iterator();
-		
-		while(it.hasNext()) {
-			System.out.println(it.next());
-		}
-		
-		
-		//Prints the same as above
-		for(String s: names) {
-			System.out.println(s);
+		for(int i = 0; i < data.length; i++) {
+			for(int j = 0; j < data[i].length; j++) {
+				System.out.print(data[i][j] + " ");
+			}
+			System.out.println();
 		}
 	}
 }
